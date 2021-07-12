@@ -41,7 +41,7 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
     }
 
     @Override
-    public List<ProductDto> getProductsByNameWithCriteriaQuery(String query) {
+    public List<ProductDto> getProductsByNameOrDescriptionWithCriteriaQuery(String query) {
         Query criteriaQuery = new CriteriaQuery(
                 new Criteria("name")
                         .is(query)

@@ -26,8 +26,8 @@ public class ProductSearchController {
     }
 
     @GetMapping("/criteria-query/{query}")
-    public List<ProductDto> getProductsByNameWithCriteriaQuery(@PathVariable String query) {
-        return elasticsearchService.getProductsByNameWithCriteriaQuery(query);
+    public List<ProductDto> getProductsByNameOrDescriptionWithCriteriaQuery(@PathVariable String query) {
+        return elasticsearchService.getProductsByNameOrDescriptionWithCriteriaQuery(query);
     }
 
     @GetMapping("/criteria-query/price")

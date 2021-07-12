@@ -7,7 +7,7 @@ import java.util.List;
 public interface ElasticsearchService {
     List<ProductDto> getProductsByName(String query);
     List<ProductDto> getProductsByNameWithStringQuery(String query);
-    List<ProductDto> getProductsByNameWithCriteriaQuery(String query);
+    List<ProductDto> getProductsByNameOrDescriptionWithCriteriaQuery(String query);
     List<ProductDto> getProductsByPriceWithCriteriaQuery(Double minPrice, Double maxPrice);
     List<ProductDto> getProductsByNameWithNativeSearchQuery(String query);
     List<ProductDto> getProductsByNameOrDescriptionWithFuzzy(String query);
